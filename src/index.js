@@ -68,6 +68,7 @@ Revoice.generateInvoice = function (data = {}, userOptions) {
   const options = {...Revoice.DEFAULT_OPTIONS, ...userOptions};
   return new Promise(function (resolve, reject) {
 
+    data['firstName'] = "firstName";
     // Validates the data object to ensure it has all the required fields
     const isValidInvoiceDataObject = Revoice.validateInvoiceDataObject(data);
 
